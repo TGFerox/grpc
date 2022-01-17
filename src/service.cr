@@ -43,7 +43,6 @@ module GRPC
               headers: HTTP::Headers {
                 ":method" => "POST",
                 ":path" => "/#{T.service_name}/\{{name}}",
-                "content-type" => "application/grpc-web+proto",
               },
               body: io.to_slice,
             )
