@@ -42,8 +42,7 @@ module GRPC
             response = @client.send(
               headers: HTTP::Headers {
                 ":method" => "POST",
-                ":path" => "/#{T.service_name}/\{{name}}",
-                "content-type" => "application/grpc-web+proto",
+                ":path" => "/#{T.service_name}/\{{name}}"
               },
               body: io.to_slice,
             )
